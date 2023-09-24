@@ -43,10 +43,11 @@ class ADEILoader:
         for csv_file, df in self.dfs.items():
             timestamp_column = df.columns[0]  # Assuming the first column is always the timestamp
             for column in df.columns[1:]:  # Skip the timestamp column
-                key = f'{csv_file}_{column}'
+                #key = f'{csv_file}_{column}'
+                key = f'{column}'
                 self.time_series_dfs[key] = df[[timestamp_column, column]]
         
-        return list(self.time_series_dfs.keys())
+        return self.time_series_dfs
     
     def get_time_series(self, key):
         """Retrieve a specific time series DataFrame based on the key."""

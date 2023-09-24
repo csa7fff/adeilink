@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[tool.setuptools]
+name = "adeilink"
+version = "0.0.1"
+description = "A library to load data from ADEI services."
+author = "Suren A. Chilingaryan"
+author_email = "csa@suren.me"
+packages = ["adeilink"]

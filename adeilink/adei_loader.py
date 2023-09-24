@@ -8,7 +8,7 @@ class ADEILoader:
     def __init__(self):
         self.dfs = {}
         self.time_series_dfs = {}
-    
+
     @staticmethod
     def _load_csv(file_path):
         """Load a CSV file into a pandas DataFrame."""
@@ -53,3 +53,7 @@ class ADEILoader:
         """Retrieve a specific time series DataFrame based on the key."""
         return self.time_series_dfs.get(key, None)
 
+
+def ADEIData(url):
+    loader = ADEILoader()
+    return loader.download_and_process(url)

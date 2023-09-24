@@ -5,6 +5,6 @@ requires = ["setuptools", "wheel"]
 name = "adeilink"
 version = "0.0.1"
 description = "A library to load data from ADEI services."
-author = [
+authors = [
     { name = "Suren A. Chilingaryan", email = "csa@suren.me" },
 ]
